@@ -1,1 +1,57 @@
+Server: Apache/2.4.58 (Ubuntu)
+Engine-Mode: "ENABLED"
+
+--4b2b5755-Z--
+
+--91c61c61-A--
+[24/Mar/2026:05:31:16.149963 +0000] acIhpAfd9AYNdAMruXEIBwAAAAY 223.187.104.233 576                                                                                                          84 172.31.6.221 80
+--91c61c61-B--
+POST /secure/login.php/ HTTP/1.1
+Host: 3.236.197.76
+Connection: keep-alive
+Content-Length: 47
+Cache-Control: max-age=0
+Origin: http://3.236.197.76
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, li                                                                                                          ke Gecko) Chrome/146.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp                                                                                                          ,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Referer: http://3.236.197.76/secure/login.php/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Cookie: PHPSESSID=f8a5cdefm9p9c0pq0o8j8adsdp
+
+--91c61c61-C--
+username=%27+or+1%3D1+--+&password=&login=Login
+--91c61c61-F--
+HTTP/1.1 403 Forbidden
+Content-Length: 277
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+
+--91c61c61-E--
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>403 Forbidden</title>
+</head><body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this resource.</p>
+<hr>
+<address>Apache/2.4.58 (Ubuntu) Server at 3.236.197.76 Port 80</address>
+</body></html>
+
+--91c61c61-H--
+Message: Access denied with code 403 (phase 2). Pattern match "(?i:(union\\s+select                                                                                                          |select\\s+.*from|or\\s+1=1|--|#))" at ARGS:username. [file "/etc/modsecurity/custo                                                                                                          m_rules.conf"] [line "2"] [id "99999999999"] [msg "SQL Injection Attempt Detected"]
+Apache-Error: [file "apache2_util.c"] [line 275] [level 3] [client 223.187.104.233]                                                                                                           ModSecurity: Access denied with code 403 (phase 2). Pattern match "(?i:(union\\\\\                                                                                                          \\\s+select|select\\\\\\\\s+.*from|or\\\\\\\\s+1=1|--|#))" at ARGS:username. [file                                                                                                           "/etc/modsecurity/custom_rules.conf"] [line "2"] [id "99999999999"] [msg "SQL Injec                                                                                                          tion Attempt Detected"] [hostname "3.236.197.76"] [uri "/secure/login.php/"] [uniqu                                                                                                          e_id "acIhpAfd9AYNdAMruXEIBwAAAAY"]
+Action: Intercepted (phase 2)
+Apache-Handler: application/x-httpd-php
+Stopwatch: 1774330276147658 2404 (- - -)
+Stopwatch2: 1774330276147658 2404; combined=159, p1=0, p2=69, p3=0, p4=0, p5=90, sr                                                                                                          =0, sw=0, l=0, gc=0
+Response-Body-Transformed: Dechunked
+Producer: ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/); OWASP_CRS/3.3                                                                                                          .5.
+Server: Apache/2.4.58 (Ubuntu)
+Engine-Mode: "ENABLED"
+
+--91c61c61-Z--
 
